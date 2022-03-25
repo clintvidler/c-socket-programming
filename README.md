@@ -21,8 +21,37 @@ Sockets are the low-level endpoints used for processing information across a net
 
 The client and server flow similarly but with differences, i.e. client connects, while server binds and listens.
 
+## HTTP
+
+HTTP is built on top of the existing TCP. What changes is the data sent and recieved, it requires specific format. Other this constraint, the socket send/recieve is the same.
+
+1. Read a html file and create a http response
+2. Do socket things as shown above but return the html data
+
+### Usage
+
+HTTP Server: Run server and browse to localhost:port
+
+HTTP Client: Run client with cli arg IP address (which can be found by pinging a url)
+
 ## References
 
 Socket Programming Tutorial In C For Beginners | Part 1:
 
 https://www.youtube.com/watch?v=LtXEMwSG5-8
+
+Socket Programming Tutorials In C For Beginners | Part 2
+
+https://www.youtube.com/watch?v=mStnzIEprH8
+
+### More Info
+
+For more infor about HTTP: RFC2616
+
+Linux manual:
+
+% man socket
+
+% man send
+
+% man recv
